@@ -13,6 +13,18 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods:{
+    Resize(){
+            window.onresize = (ev)=>{
+                if(ev.target.innerWidth<=800){
+                    this.$router.push('/mobi')
+                }
+            }
+        }
+  },
+  mounted(){
+    this.Resize()
   }
 }
 </script>
